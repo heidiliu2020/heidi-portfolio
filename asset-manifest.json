@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/heidi-portfolio/static/css/main.c3322d17.chunk.css",
+    "main.js": "/heidi-portfolio/static/js/main.8c509837.chunk.js",
+    "main.js.map": "/heidi-portfolio/static/js/main.8c509837.chunk.js.map",
+    "runtime-main.js": "/heidi-portfolio/static/js/runtime-main.ef99ea79.js",
+    "runtime-main.js.map": "/heidi-portfolio/static/js/runtime-main.ef99ea79.js.map",
+    "static/css/2.ae9f1eb3.chunk.css": "/heidi-portfolio/static/css/2.ae9f1eb3.chunk.css",
+    "static/js/2.2e113513.chunk.js": "/heidi-portfolio/static/js/2.2e113513.chunk.js",
+    "static/js/2.2e113513.chunk.js.map": "/heidi-portfolio/static/js/2.2e113513.chunk.js.map",
+    "index.html": "/heidi-portfolio/index.html",
+    "static/css/2.ae9f1eb3.chunk.css.map": "/heidi-portfolio/static/css/2.ae9f1eb3.chunk.css.map",
+    "static/css/main.c3322d17.chunk.css.map": "/heidi-portfolio/static/css/main.c3322d17.chunk.css.map",
+    "static/js/2.2e113513.chunk.js.LICENSE.txt": "/heidi-portfolio/static/js/2.2e113513.chunk.js.LICENSE.txt",
+    "static/media/bg_001.9f65c275.jpg": "/heidi-portfolio/static/media/bg_001.9f65c275.jpg",
+    "static/media/bg_002.4c8948af.jpg": "/heidi-portfolio/static/media/bg_002.4c8948af.jpg",
+    "static/media/bg_003.e046146a.jpg": "/heidi-portfolio/static/media/bg_003.e046146a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ef99ea79.js",
+    "static/css/2.ae9f1eb3.chunk.css",
+    "static/js/2.2e113513.chunk.js",
+    "static/css/main.c3322d17.chunk.css",
+    "static/js/main.8c509837.chunk.js"
+  ]
+}
