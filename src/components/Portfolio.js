@@ -91,7 +91,15 @@ function RepoList({ repo }) {
           >
             Repo Link
           </Card.Link>
-          {repo.homepage && <Card.Link href={repo.homepage}>Demo</Card.Link>}
+          {repo.homepage && (
+            <Card.Link
+              href={repo.homepage}
+              target="_blank"
+              rel="noreferrer nofollow"
+            >
+              Demo
+            </Card.Link>
+          )}
         </CardBody>
       </CardContainer>
     </RepoContainer>
