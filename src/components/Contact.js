@@ -55,8 +55,10 @@ const CommunityButtons = styled.div`
 
   @media (max-width: 767px) {
     button {
-      width: 90px;
-      margin: 0 5px;
+      width: 85px;
+      margin: 0 4px;
+      font-size: 20px;
+      padding: 6px;
     }
   }
 `;
