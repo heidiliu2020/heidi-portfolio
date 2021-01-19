@@ -13,11 +13,19 @@ const AboutWrapper = styled.div`
     padding: 160px;
     font-size: 68px;
   }
+
+  @media (max-width: 767px) {
+    h2 {
+      padding: 160px 0;
+      font-size: 48px;
+    }
+  }
 `;
 
-const AboutContent = styled.div`
+const AboutContainer = styled.div`
+  overflow: hidden;
   position: relative;
-  background: url(${Banner}) fixed no-repeat bottom center / cover;
+  background: url(${Banner}) fixed top center / cover;
   color: #000;
 `;
 
@@ -29,7 +37,7 @@ const Overlay = styled.div`
   background-color: rgba(240, 240, 240, 0.5);
 `;
 
-const AboutContainer = styled.div`
+const AboutContent = styled.div`
   position: relative;
   z-index: 10;
   display: flex;
@@ -40,6 +48,13 @@ const AboutContainer = styled.div`
     width: 180px;
     height: 180px;
     margin-right: 100px;
+  }
+
+  :hover {
+    img {
+      transform: rotate(1turn);
+      transition: ease-in-out all 1s;
+    }
   }
 
   @media (max-width: 767px) {
@@ -56,9 +71,14 @@ const AboutContainer = styled.div`
 const Profile = styled.div`
   width: 50%;
   line-height: 2;
+  font-weight: 700;
 
   h5 {
-    color: #555;
+    color: #333;
+    font-size: 18px;
+  }
+
+  p {
     font-size: 18px;
   }
 
@@ -84,9 +104,9 @@ export default function About({ user }) {
   return (
     <AboutWrapper id="about">
       <h2>About Me...</h2>
-      <AboutContent>
+      <AboutContainer>
         <Overlay></Overlay>
-        <AboutContainer>
+        <AboutContent>
           <Image src={user.avatar_url} alt="avatar" roundedCircle />
           <Profile>
             <h3>{user.name}</h3>
@@ -112,8 +132,8 @@ export default function About({ user }) {
               </a>
             </Icons>
           </Profile>
-        </AboutContainer>
-      </AboutContent>
+        </AboutContent>
+      </AboutContainer>
     </AboutWrapper>
   );
 }

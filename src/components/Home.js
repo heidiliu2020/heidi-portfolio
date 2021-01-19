@@ -32,7 +32,7 @@ const HomeWrapper = styled.div`
 
 export default function Home() {
   return (
-    <HomeWrapper id="home">
+    <HomeWrapper>
       <div>
         <h2>Hi, I'm Heidi Liu :)</h2>
         <h5>Web Developer | Traveller</h5>

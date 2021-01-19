@@ -8,6 +8,7 @@ import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import { getUser, getAllRepos } from "../webAPI";
+import Loading from "./Loading";
 
 const Wrapper = styled.div`
   overflow: hidden;
@@ -15,23 +16,28 @@ const Wrapper = styled.div`
 `;
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(false);
   const [user, setUser] = useState("");
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {
+    setIsLoading(true);
     getUser().then((res) => {
-      console.log(res);
       setUser(res);
+      setIsLoading(false);
     });
 
     getAllRepos().then((res) => {
-      console.log(res);
+      // 決定顯示哪些
       const rawRepos = res.filter((repo) => {
         if (repo.name !== "mentor-program-4th") {
-          if (repo.name !== "this-is-codediary") return repo;
+          if (repo.name !== "this-is-codediary") {
+            if (repo.name !== "react-demo-json-api-server") return repo;
+          }
         }
       });
       setRepos(rawRepos);
+      setIsLoading(false);
     });
   }, []);
 
@@ -39,9 +45,15 @@ export default function App() {
     <Wrapper>
       <Header />
       <Home />
-      <About user={user} />
-      <Portfolio repos={repos} />
-      <Contact user={user} />
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <>
+          <About user={user} />
+          <Portfolio repos={repos} />
+        </>
+      )}
+      <Contact />
       <Footer />
     </Wrapper>
   );

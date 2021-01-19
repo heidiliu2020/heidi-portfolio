@@ -17,6 +17,7 @@ export default function Header() {
   const navRef = useRef();
   navRef.current = navBackground;
 
+  // navbar 背景是否顯示
   useEffect(() => {
     const handleScroll = () => {
       const show = window.scrollY > 50;
