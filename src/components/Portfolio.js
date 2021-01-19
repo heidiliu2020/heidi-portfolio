@@ -84,7 +84,13 @@ function RepoList({ repo }) {
         <CardBody>
           <h5>{repo.name}</h5>
           <Card.Text>{repo.description}</Card.Text>
-          <Card.Link href={repo.html_url}>Repo Link</Card.Link>
+          <Card.Link
+            href={repo.html_url}
+            target="_blank"
+            rel="noreferrer nofollow"
+          >
+            Repo Link
+          </Card.Link>
           {repo.homepage && <Card.Link href={repo.homepage}>Demo</Card.Link>}
         </CardBody>
       </CardContainer>
