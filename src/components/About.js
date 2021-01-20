@@ -1,24 +1,37 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { Image } from "react-bootstrap";
 import { GithubIcon, MediumIcon, RssIcon } from "../utils";
 import Banner from "../images/bg_003.jpg";
 
 const AboutWrapper = styled.div`
-  color: #eee;
-  background: #222;
+  transition: 1.5s ease all;
 
-  h2 {
-    text-align: center;
-    padding: 160px;
-    font-size: 68px;
-  }
+  ${(props) =>
+    props.selected
+      ? `background: #eee; color: #222;`
+      : `background: #222; color: #eee;`};
+`;
+
+const AboutTitle = styled.div`
+  text-align: center;
+  height: 350px;
+  position: relative;
+  white-space: nowrap;
+`;
+
+const H2 = styled.h2`
+  position: absolute;
+  font-size: 72px;
+  transition: 1s ease all;
+
+  ${(props) =>
+    props.selected
+      ? `top:80%; left: 50%; transform: translate(-50%, -50%);`
+      : `top:30%; left: 50%;  transform: translate(-50%, -50%);`};
 
   @media (max-width: 767px) {
-    h2 {
-      padding: 160px 0;
-      font-size: 48px;
-    }
+    font-size: 48px;
   }
 `;
 
@@ -43,6 +56,7 @@ const AboutContent = styled.div`
   display: flex;
   justify-content: center;
   padding: 100px 20px;
+  white-space: nowrap;
 
   img {
     width: 180px;
@@ -101,9 +115,28 @@ const Icons = styled.div`
 `;
 
 export default function About({ user }) {
+  const [aboutTitle, setAboutTitle] = useState(false);
+  const aboutRef = useRef();
+  aboutRef.current = aboutTitle;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const show = window.scrollY > 440;
+      if (aboutRef.current !== show) {
+        setAboutTitle(show);
+      }
+    };
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <AboutWrapper id="about">
-      <h2>About Me...</h2>
+    <AboutWrapper id="about" selected={aboutTitle}>
+      <AboutTitle>
+        <H2 selected={aboutTitle}>About Me...</H2>
+      </AboutTitle>
       <AboutContainer>
         <Overlay></Overlay>
         <AboutContent>
