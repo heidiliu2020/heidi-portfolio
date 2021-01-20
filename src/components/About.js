@@ -40,6 +40,10 @@ const AboutContainer = styled.div`
   position: relative;
   background: url(${Banner}) fixed top center / cover;
   color: #000;
+
+  @supports (-webkit-touch-callout: inherit) {
+    background-attachment: scroll;
+  }
 `;
 
 const Overlay = styled.div`
@@ -86,7 +90,7 @@ const Profile = styled.div`
   width: 50%;
   line-height: 2;
   font-weight: 700;
-
+  white-space: pre-wrap;
   h5 {
     color: #333;
     font-size: 18px;

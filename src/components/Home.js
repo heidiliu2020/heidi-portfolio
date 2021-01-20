@@ -26,7 +26,7 @@ const TitleBox = styled.div`
     ${(props) =>
       props.selected
         ? `top: 60%; left: 25%; padding: 16px 24px;`
-        : `top: 30%; left: 40%; padding: 16px ;`};
+        : `top: 30%; left: 36%; padding: 16px ;`};
   }
 `;
 

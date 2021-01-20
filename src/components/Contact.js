@@ -13,6 +13,10 @@ const LearnMoreContainer = styled.div`
   overflow: hidden;
   height: 330px;
   background: url(${LearnMoreBanner}) fixed bottom center / cover;
+
+  @supports (-webkit-touch-callout: inherit) {
+    background-attachment: scroll;
+  }
 `;
 
 const LearnMoreTitle = styled.div`
@@ -68,6 +72,10 @@ const ContactContainer = styled.div`
   overflow: hidden;
   height: 600px;
   background: url(${ContactBanner}) fixed center center / cover;
+
+  @supports (-webkit-touch-callout: inherit) {
+    background-attachment: scroll;
+  }
 
   form {
     background-color: rgba(255, 255, 255, 0.8);
