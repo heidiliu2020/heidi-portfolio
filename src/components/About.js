@@ -109,6 +109,9 @@ const Profile = styled.div`
 `;
 
 const Icons = styled.div`
+  display: flex;
+  align-items: center;
+
   a {
     margin-right: 10px;
 
@@ -120,25 +123,30 @@ const Icons = styled.div`
 
 const ResumeIcon = styled.button`
   display: inline-block;
-  padding: 2px 8px;
   border: none;
   border-radius: 4px;
-  margin-left: 20px;
+  margin-left: 5px;
   transition: 0.5s ease-in-out all;
-
+  background: transparent;
   a {
     text-decoration: none;
     margin: 0;
-    color: #222;
+    color: #eee;
     font-size: 24px;
+    display: flex;
+    align-items: center;
   }
   svg {
-    color: #222;
+    color: #eee;
+    margin-right: 5px;
   }
 
   :hover {
     transform: scale(1.2);
-    background: #f5a623;
+    a,
+    svg {
+      color: #222;
+    }
   }
 `;
 
@@ -192,13 +200,13 @@ export default function About({ user }) {
                 <RssIcon></RssIcon>
               </a>
 
-              <ResumeIcon variant="warning">
+              <ResumeIcon variant="Light">
                 <a
                   href="https://www.cakeresume.com/jungting-liu"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <HandIcon></HandIcon> Resume
+                  <HandIcon></HandIcon>Resume
                 </a>
               </ResumeIcon>
             </Icons>
