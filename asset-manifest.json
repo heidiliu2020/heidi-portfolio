@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/heidi-portfolio/static/css/main.3998a7c4.chunk.css",
-    "main.js": "/heidi-portfolio/static/js/main.5510f6bb.chunk.js",
-    "main.js.map": "/heidi-portfolio/static/js/main.5510f6bb.chunk.js.map",
+    "main.js": "/heidi-portfolio/static/js/main.46b0c1dd.chunk.js",
+    "main.js.map": "/heidi-portfolio/static/js/main.46b0c1dd.chunk.js.map",
     "runtime-main.js": "/heidi-portfolio/static/js/runtime-main.ef99ea79.js",
     "runtime-main.js.map": "/heidi-portfolio/static/js/runtime-main.ef99ea79.js.map",
     "static/css/2.ae9f1eb3.chunk.css": "/heidi-portfolio/static/css/2.ae9f1eb3.chunk.css",
-    "static/js/2.4e60ce18.chunk.js": "/heidi-portfolio/static/js/2.4e60ce18.chunk.js",
-    "static/js/2.4e60ce18.chunk.js.map": "/heidi-portfolio/static/js/2.4e60ce18.chunk.js.map",
+    "static/js/2.015b5b10.chunk.js": "/heidi-portfolio/static/js/2.015b5b10.chunk.js",
+    "static/js/2.015b5b10.chunk.js.map": "/heidi-portfolio/static/js/2.015b5b10.chunk.js.map",
     "index.html": "/heidi-portfolio/index.html",
     "static/css/2.ae9f1eb3.chunk.css.map": "/heidi-portfolio/static/css/2.ae9f1eb3.chunk.css.map",
     "static/css/main.3998a7c4.chunk.css.map": "/heidi-portfolio/static/css/main.3998a7c4.chunk.css.map",
-    "static/js/2.4e60ce18.chunk.js.LICENSE.txt": "/heidi-portfolio/static/js/2.4e60ce18.chunk.js.LICENSE.txt",
+    "static/js/2.015b5b10.chunk.js.LICENSE.txt": "/heidi-portfolio/static/js/2.015b5b10.chunk.js.LICENSE.txt",
     "static/media/bg_001.9f65c275.jpg": "/heidi-portfolio/static/media/bg_001.9f65c275.jpg",
     "static/media/bg_002.4c8948af.jpg": "/heidi-portfolio/static/media/bg_002.4c8948af.jpg",
     "static/media/bg_003.e046146a.jpg": "/heidi-portfolio/static/media/bg_003.e046146a.jpg",
@@ -21,13 +21,13 @@
     "static/media/react-blog.aac0682d.png": "/heidi-portfolio/static/media/react-blog.aac0682d.png",
     "static/media/succulents society.231203c4.jpg": "/heidi-portfolio/static/media/succulents society.231203c4.jpg",
     "static/media/sweetbreath2.fe768bb9.png": "/heidi-portfolio/static/media/sweetbreath2.fe768bb9.png",
-    "static/media/tech-blog.9f28401e.png": "/heidi-portfolio/static/media/tech-blog.9f28401e.png"
+    "static/media/tech-blog.766e2a61.png": "/heidi-portfolio/static/media/tech-blog.766e2a61.png"
   },
   "entrypoints": [
     "static/js/runtime-main.ef99ea79.js",
     "static/css/2.ae9f1eb3.chunk.css",
-    "static/js/2.4e60ce18.chunk.js",
+    "static/js/2.015b5b10.chunk.js",
     "static/css/main.3998a7c4.chunk.css",
-    "static/js/main.5510f6bb.chunk.js"
+    "static/js/main.46b0c1dd.chunk.js"
   ]
 }
