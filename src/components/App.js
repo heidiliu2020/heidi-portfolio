@@ -29,7 +29,7 @@ export default function App() {
 
     getAllRepos().then((res) => {
       // 決定顯示哪些
-      const rawRepos = res.filter((repo) => {
+      const rawRepos = res.reverse().filter((repo) => {
         if (repo.name !== "mentor-program-4th") {
           if (repo.name !== "this-is-codediary") {
             if (repo.name !== "react-demo-json-api-server") return repo;

@@ -9,17 +9,30 @@ import succulents from "../images/succulents society.jpg";
 import sweetbreath from "../images/sweetbreath2.png";
 
 const PortfolioWrapper = styled.div`
-  padding: 100px;
+  padding: 200px 120px 150px 120px;
   color: #222;
+  position: relative;
 
+  @media (max-width: 767px) {
+    padding: 200px 40px 100px 40px;
+  }
+`;
+
+const TitleBox = styled.div`
+  position: absolute;
+  top: 50px;
+  left: 0;
+  padding: 16px 20px 16px 160px;
+  background: rgba(54, 191, 54, 0.5);
   h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 46px;
+    font-size: 58px;
   }
 
   @media (max-width: 767px) {
-    padding: 80px 40px;
+    h2 {
+      font-size: 48px;
+    }
+    padding: 16px 16px 16px 80px;
   }
 `;
 
@@ -36,8 +49,11 @@ const RepoContainer = styled.div`
 const CardContainer = styled(Card)`
   width: 320px;
   white-space: pre-wrap;
+  transition: ease-in-out all 0.5s;
+  box-shadow: 0 0px 2px 0px rgba(180, 180, 180, 0.32);
 
   :hover {
+    box-shadow: 0 3px 8px 1px rgba(100, 100, 100, 0.32);
     img {
       transform: scale(1.15);
       transition: ease-in-out all 0.5s;
@@ -50,7 +66,7 @@ const CardContainer = styled(Card)`
 `;
 
 const ImageContainer = styled.div`
-  height: 160px;
+  height: 180px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   overflow: hidden;
   img {
@@ -77,7 +93,7 @@ function RepoList({ repo }) {
 
   return (
     <RepoContainer>
-      <CardContainer className="mb-3 mr-3">
+      <CardContainer className="mb-4 mr-4">
         <ImageContainer>
           <img src={demoImage} alt="demo" />
         </ImageContainer>
@@ -109,7 +125,9 @@ function RepoList({ repo }) {
 export default function Portfolio({ repos }) {
   return (
     <PortfolioWrapper id="portfolio">
-      <h2>Portfolio</h2>
+      <TitleBox>
+        <h2>Portfolio</h2>
+      </TitleBox>
       <div className="d-flex flex-wrap justify-content-center ">
         {repos.map((repo) => (
           <RepoList key={repo.id} repo={repo} />

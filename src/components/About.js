@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
-import { Image } from "react-bootstrap";
-import { GithubIcon, MediumIcon, RssIcon } from "../utils";
+import { Image, Button } from "react-bootstrap";
+import { GithubIcon, MediumIcon, RssIcon, HandIcon } from "../utils";
 import Banner from "../images/bg_003.jpg";
 
 const AboutWrapper = styled.div`
@@ -118,6 +118,30 @@ const Icons = styled.div`
   }
 `;
 
+const ResumeIcon = styled.button`
+  display: inline-block;
+  padding: 2px 8px;
+  border: none;
+  border-radius: 4px;
+  margin-left: 20px;
+  transition: 0.5s ease-in-out all;
+
+  a {
+    text-decoration: none;
+    margin: 0;
+    color: #222;
+    font-size: 24px;
+  }
+  svg {
+    color: #222;
+  }
+
+  :hover {
+    transform: scale(1.2);
+    background: #f5a623;
+  }
+`;
+
 export default function About({ user }) {
   const [aboutTitle, setAboutTitle] = useState(false);
   const aboutRef = useRef();
@@ -167,6 +191,16 @@ export default function About({ user }) {
               >
                 <RssIcon></RssIcon>
               </a>
+
+              <ResumeIcon variant="warning">
+                <a
+                  href="https://www.cakeresume.com/jungting-liu"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <HandIcon></HandIcon> Resume
+                </a>
+              </ResumeIcon>
             </Icons>
           </Profile>
         </AboutContent>
